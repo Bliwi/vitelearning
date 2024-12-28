@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bliwi Portfolio</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+  <div id="wapper">
+    <div class="page">
+      <div id="container1">
+        <div id="heroInner"></div>
+      </div>
+      <div id="container2" class="container">
+        <div class="containerHeader">
+          <h2>Commissions</h2>
+        </div>
+        <div class="commissionsHeroContainer">
+          <div class="commissionsHeroSidebar">
+            <div class="itemHeroCommissions" style="background-image: url('../snipets/kagogi icon.png'); margin-top: 0;"
+              onclick="showContainer(0)">icon</div>
+            <div class="itemHeroCommissions half-bodyCommission"
+              style="background-image: url('../snipets/archie_lowres watermarked.png');" onclick="showContainer(1)">half
+              body</div>
+            <div class="itemHeroCommissions full-bodyCommission" style="background-image: url('../snipets/milo.png');"
+              onclick="showContainer(2)">full body</div>
+            <div class="itemHeroCommissions" style="background-image: url('../snipets/proto-fisheye-no-ovelay.png');"
+              onclick="showContainer(3)">scene</div>
+            <div class="itemHeroCommissions"
+              style="background-image: url('../snipets/Iralikesentinel_Ira.png'); margin-bottom: 0;"
+              onclick="showContainer(4)">ref-sheet</div>
+          </div>
+
+
+          <div class="commissionsHeroBackground" id="heroparallaxContainer">
+            <div id="commissionsHeroCharacter"></div>
+            <script>
+              const ccontainer = document.getElementById('commissionsHeroCharacter');
+
+              ccontainer.addEventListener('mousemove', (e) => {
+                const crect = container.getBoundingClientRect();
+                const cx = e.clientX - crect.left; // Mouse X position relative to the container
+                const cy = e.clientY - crect.top;  // Mouse Y position relative to the container
+
+                // Calculate the offset for the background
+                const cxOffset = ((cx / crect.width) - 0.5) * 80; // Adjust the multiplier for effect strength
+                const cyOffset = ((cy / crect.height) - 0.5) * 80;
+
+                ccontainer.style.backgroundPosition = `${50 + cxOffset}% ${50 + cyOffset}%`;
+              });
+            </script>
+            <div id="commissionsHeroSectionWrapper">
+              <div id="commissionsHerodiv1" class="containerHeroMain active">
+                <div class="commissionsHeroHeader">ICON</div>
+              </div>
+              <div id="commissionsHerodiv2" class="containerHeroMain">HALF BODY</div>
+              <div id="commissionsHerodiv3" class="containerHeroMain">FULL BODY</div>
+              <div id="commissionsHerodiv4" class="containerHeroMain">SCENE</div>
+              <div id="commissionsHerodiv5" class="containerHeroMain">REF-SHEET</div>
+            </div>
+          </div>
+          <script>
+            const container = document.getElementById('heroparallaxContainer');
+
+            container.addEventListener('mousemove', (e) => {
+              const rect = container.getBoundingClientRect();
+              const x = e.clientX - rect.left; // Mouse X position relative to the container
+              const y = e.clientY - rect.top;  // Mouse Y position relative to the container
+
+              // Calculate the offset for the background
+              const xOffset = ((x / rect.width) - 0.5) * 30; // Adjust the multiplier for effect strength
+              const yOffset = ((y / rect.height) - 0.5) * 30;
+
+              container.style.backgroundPosition = `${50 + xOffset}% ${50 + yOffset}%`;
+            });
+          </script>
+          <div id="callForActionPortfolio">More Examples</div>
+          <div id="callForActionPortfolioCircle"></div>
+        </div>
+      </div>
+      <div id="container3" class="container">
+        <div class="containerHeader">
+          <h2>Contact</h2>
+        </div>
+        
+      </div>
+      <div id="container4" class="container">
+        <div class="flex">
+          <div class="inner" style="flex: 0.5; background: none;">
+            <h1>Section</h1>
+          </div>
+          <div class="inner">
+            <h1>Hello! This is my TOS</h1>
+          </div>
+
+        </div>
+        <div class="footer">
+          <h2>Footer here</h2>
+        </div>
+      </div>
+    </div>
+    </section>
+    <div container></div>
+  </div>
+</body>
+
+</html>

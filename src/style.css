@@ -44,7 +44,7 @@ body {
 
 #container2 {
 	position: sticky;
-	background-image: url('./Cyrus_Kirin_watermark.png');
+	background-image: url('../Cyrus_Kirin_watermark.png');
 	z-index: 1;
 	height: 64rem;
 	margin-bottom: -4rem;
@@ -81,7 +81,7 @@ body {
   height: 100%;
   background: rgb(115, 255, 0);
   border-radius: 2.5rem;
-  mask:  url('assets/home/square-corner.svg');
+  mask:  url('../assets/home/square-corner.svg');
   mask-position: top right;
   mask-size: 70rem;
  }
@@ -143,10 +143,10 @@ body {
       width: calc(100% - 220px);
       height: auto;
       margin-left: 20px;
-      background-image: url('assets/home/bg.png');
+      background-image: url('../assets/home/bg.png');
       background-size: 120%;
       background-position: center;
-      mask: url('assets/home/container.svg');
+      mask: url('../assets/home/container.svg');
       mask-position: bottom right;
       mask-size: 65rem;
       border-radius: 2rem;
@@ -210,6 +210,9 @@ body {
     }
 
 @media screen and (orientation:portrait) {
+  html {
+    font-size: 25px;
+  }
   #container1 {
     border-radius: 3rem;
     margin: calc(50vh - 15rem) auto;
